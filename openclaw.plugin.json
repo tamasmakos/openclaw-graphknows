@@ -1,0 +1,50 @@
+{
+  "id": "obsidian-graph-memory",
+  "name": "Obsidian Graph Memory",
+  "description": "Compile Obsidian markdown vaults into local graph memory artifacts for retrieval, linting, and agent workflows.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "vaultPath": {
+        "type": "string",
+        "minLength": 1
+      },
+      "artifactDirName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "defaultQueryMode": {
+        "type": "string",
+        "enum": [
+          "lookup",
+          "graph"
+        ]
+      },
+      "sourceSummaryDir": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "uiHints": {
+    "vaultPath": {
+      "label": "Vault Path",
+      "help": "Absolute path to the Obsidian vault to compile and query."
+    },
+    "artifactDirName": {
+      "label": "Artifact Directory",
+      "help": "Hidden directory inside the vault used for compiled graph memory artifacts.",
+      "advanced": true
+    },
+    "defaultQueryMode": {
+      "label": "Default Query Mode",
+      "help": "Use lookup for lexical ranking or graph for lexical ranking plus neighborhood expansion."
+    },
+    "sourceSummaryDir": {
+      "label": "Source Summary Directory",
+      "help": "Reserved folder for future machine-authored source summary notes.",
+      "advanced": true
+    }
+  }
+}

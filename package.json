@@ -1,0 +1,20 @@
+{
+  "name": "@openclaw/obsidian-graph-memory",
+  "version": "0.1.0",
+  "description": "Local-first graph memory compiler and retrieval extension for Obsidian vaults in OpenClaw.",
+  "type": "module",
+  "bin": {
+    "openclaw-obsidian-memory": "./bin/openclaw-obsidian-memory.js"
+  },
+  "scripts": {
+    "ingest": "node ./bin/openclaw-obsidian-memory.js ingest",
+    "query": "node ./bin/openclaw-obsidian-memory.js query",
+    "lint": "node ./bin/openclaw-obsidian-memory.js lint",
+    "smoke": "node ./scripts/smoke-test.js"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  }
+}
