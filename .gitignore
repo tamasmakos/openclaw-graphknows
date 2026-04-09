@@ -1,1 +1,13 @@
 .obsidian-graph-memory/
+__pycache__/
+*.pyc
+*.egg-info/
+.eggs/
+dist/
+build/
+nohup.out
+*.sqlite3
+*.sqlite
+.mypy_cache/
+.ruff_cache/
+__pycache__/
